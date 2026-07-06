@@ -112,11 +112,4 @@ Then open the notebook file and execute the analysis workflow.
 * Unsupervised learning and clustering
 * Model evaluation and interpretation
 
-## Author
-
-Developed as coursework for Programming for Data Analysis and AI.
-
-## License
-
-This project is intended for educational and academic purposes.
 
