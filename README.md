@@ -1,115 +1,235 @@
-
-
 ## Overview
 
-This project demonstrates the application of data analytics and machine learning techniques to a healthcare stroke dataset. The analysis includes descriptive statistics, data visualization, predictive modeling, and clustering to identify patterns and factors associated with stroke occurrence.
+This project presents a complete data analytics and machine learning workflow using a healthcare stroke dataset. The objective is to explore factors associated with stroke occurrence and build predictive models using classification, regression, and clustering techniques.
 
-The notebook was developed as part of the Programming for Data Analysis and AI coursework and showcases the complete data analysis workflow from data exploration to machine learning.
+The project follows a structured analytics pipeline:
 
-## Objectives
+1. Descriptive Analytics
+2. Data Preparation
+3. Classification
+4. Regression
+5. Clustering
 
-* Perform exploratory data analysis (EDA) on healthcare stroke data.
-* Generate descriptive statistics and insights.
-* Visualize relationships between demographic and health-related variables.
-* Build machine learning models for stroke prediction.
-* Apply clustering techniques to discover hidden patterns in the data.
-* Evaluate model performance using appropriate metrics.
+---
 
 ## Dataset
 
-The project uses a healthcare stroke dataset containing information such as:
+The dataset contains patient health information including:
 
-* Gender
-* Age
-* Hypertension status
-* Heart disease status
-* Marital status
-* Work type
-* Residence type
-* Average glucose level
-* BMI
-* Smoking status
-* Stroke outcome
+- Gender
+- Age
+- Hypertension
+- Heart Disease
+- Marital Status
+- Work Type
+- Residence Type
+- Average Glucose Level
+- BMI
+- Smoking Status
+- Stroke Status
 
-## Project Structure
+The target variable is:
 
-### 1. Descriptive Analytics
+- **Stroke (0 = No Stroke, 1 = Stroke)**
 
-* Data loading and inspection
-* Data type analysis
-* Summary statistics
-* Frequency distributions
-* Percentage analysis of categorical variables
-
-### 2. Data Visualization
-
-* Box plots
-* Distribution analysis
-* Comparative visualizations
-* Exploratory graphical analysis
-
-### 3. Predictive Analytics
-
-* Data preprocessing
-* Feature engineering
-* Model training
-* Performance evaluation
-
-### 4. Clustering Analysis
-
-* K-Means clustering
-* Elbow method analysis
-* Silhouette score evaluation
-* Cluster interpretation and visualization
+---
 
 ## Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* Yellowbrick
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Imbalanced-Learn (SMOTE)
 
-## Installation
+---
 
-1. Clone the repository:
+## Project Structure
 
-```bash
-git clone https://github.com/your-username/stroke-risk-analysis-and-machine-learning.git
+```
+Group_AU_Programming_for_Data_Analysis_and_AI_Coursework.ipynb
+README.md
+healthcare-dataset-stroke-data.csv
 ```
 
-2. Navigate to the project directory:
+---
 
-```bash
-cd stroke-risk-analysis-and-machine-learning
+## 1. Descriptive Analytics
+
+The project begins with exploratory data analysis (EDA), including:
+
+- Data inspection
+- Summary statistics
+- Missing value analysis
+- Distribution analysis
+- Categorical feature analysis
+
+### Visualizations
+
+- Box Plots
+- Violin Plots
+- Bar Charts
+- Heatmaps
+
+---
+
+## 2. Data Preparation
+
+Data preprocessing includes:
+
+### Missing Value Handling
+
+- BMI value imputation
+
+### Feature Engineering
+
+- Data transformation
+- Feature creation
+
+### Encoding
+
+Categorical variables are converted into numerical format using encoding techniques.
+
+### Scaling and Normalization
+
+Numerical features are standardized for model training.
+
+### Outlier Removal
+
+Outliers are identified and removed from:
+
+- BMI
+- Average Glucose Level
+
+---
+
+## 3. Classification Models
+
+The project compares several machine learning classifiers for stroke prediction.
+
+### Models Used
+
+- Logistic Regression
+- Support Vector Classifier (SVC)
+- Decision Tree Classifier
+- K-Nearest Neighbors (KNN)
+- Random Forest Classifier
+
+### Class Imbalance Handling
+
+The project applies:
+
+- SMOTE (Synthetic Minority Oversampling Technique)
+
+to improve model performance on the minority stroke class.
+
+### Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+---
+
+## 4. Regression Analysis
+
+Regression models are used to analyze relationships between healthcare variables and continuous outcomes.
+
+Evaluation metrics include:
+
+- R² Score
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
+
+---
+
+## 5. Clustering
+
+Unsupervised learning techniques are used to identify hidden patterns within the healthcare dataset.
+
+### Clustering Models
+
+#### K-Means Clustering
+
+Used to group patients based on similar health characteristics.
+
+#### DBSCAN
+
+Density-based clustering for discovering natural patient groups and outliers.
+
+---
+
+## Machine Learning Workflow
+
+```text
+Data Collection
+      ↓
+Descriptive Analytics
+      ↓
+Data Cleaning
+      ↓
+Feature Engineering
+      ↓
+Data Preparation
+      ↓
+Classification
+      ↓
+Regression
+      ↓
+Clustering
+      ↓
+Model Evaluation
 ```
 
-3. Install required dependencies:
+---
+
+## How to Run
+
+### Clone the Repository
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn yellowbrick
+git clone https://github.com/yourusername/stroke-prediction-data-analytics.git
 ```
 
-## Usage
-
-Open the Jupyter Notebook and run the cells sequentially:
+### Install Dependencies
 
 ```bash
-jupyter notebook
+pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn
 ```
 
-Then open the notebook file and execute the analysis workflow.
+### Open the Notebook
 
-## Key Learning Outcomes
+```bash
+jupyter notebook Group_AU_Programming_for_Data_Analysis_and_AI_Coursework.ipynb
+```
 
-* Data cleaning and preprocessing
-* Exploratory data analysis
-* Statistical interpretation
-* Data visualization techniques
-* Supervised machine learning concepts
-* Unsupervised learning and clustering
-* Model evaluation and interpretation
+### Run All Cells
 
+Execute all notebook cells sequentially.
 
+---
+
+## Key Skills Demonstrated
+
+- Exploratory Data Analysis (EDA)
+- Data Cleaning
+- Feature Engineering
+- Data Visualization
+- Predictive Analytics
+- Classification
+- Regression
+- Clustering
+- Healthcare Data Analysis
+- Machine Learning Model Evaluation
+
+---
+
+## Authors
+
+Aliyu Yakubu Suleiman  
+MSc Artificial Intelligence and Machine Learning  
+University of Portsmouth
